@@ -48,45 +48,43 @@ A two-dimensional simplicial set comes with
 
 *  the sets $X_0,X_1,X_2$ of simplices
 * the face maps
-$$
-d_i: X_1 \to X_0 \;\;\;\; i=0,1
-$$
+
+$ d_i: X_1 \to X_0 \;\;\;\; i=0,1 $
+
 and
-$$
-d_i:X_2\to X_1 \;\;\;\; i=0,1,2
-$$
+$ d_i:X_2\to X_1 \;\;\;\; i=0,1,2 $
+
 * the degeneracy map
-$$
-s_0:X_0\to X_1
-$$
+
+$s_0:X_0\to X_1$
+
 and
-$$
-s_0:X_1\to X_2 \;\;\;\; s_1:X_1\to X_2
-$$
+
+$s_0:X_1\to X_2 \;\;\;\; s_1:X_1\to X_2$
+
 Two-dimensional simplicial sets will represent our measurement spaces. 
 
 Outcome spaces will be represented by the nerve space $Y=N\mathbb{Z}_d$. We are only concerned with the two-dimensional part of this space:
 
 *  the sets 
-$$Y_0=\{\ast\} \;\;\;\; Y_1=\mathbb{Z}_d \;\;\;\; Y_2=\mathbb{Z}_d^2 $$
+$Y_0=\{\ast\} \;\;\;\; Y_1=\mathbb{Z}_d \;\;\;\; Y_2=\mathbb{Z}_d^2 $
+
 of simplices
+
 * the face maps
-$$
-d_0(a,b) = b\;\;\;\; d_1(a,b)=a+b\;\;\;\;d_2(a,b)=a
-$$ 
+$d_0(a,b) = b\;\;\;\; d_1(a,b)=a+b\;\;\;\;d_2(a,b)=a$
+
 * the degeneracy map
-$$
-s_0(\ast) = 0.
-$$
+
+$s_0(\ast) = 0.$
 
  
 
 A two-dimensional simplicial distribution on $(X,Y)$ is a simplicial map $p:X\to DY$ where $DY$ is the space of distributions constructed from the outcome space. An $n$-simplex of this space is a distribution on the set of $n$-simplices of the outcome space. For our case a simplicial distribution consists of
 
 * distributions 
-$$
-p_\sigma = \{p_\sigma^{ab}\}_{a,b\in \mathbb{Z}_d} 
-$$
+$p_\sigma = \{p_\sigma^{ab}\}_{a,b\in \mathbb{Z}_d} $
+
 on the set of pairs $(a,b)$ parametrized by the two-simplices $\sigma\in X_2$ satisfying the simplicial relations coming from the face and the degeneracy maps. 
 
 For example, let our measurement space be the diamond space $D$ obtained by gluing two triangles ($2$-simplices) $\sigma$ and $\sigma'$ along a common face, i.e., say $d_1\sigma=d_1\sigma'$. Then a simplicial distribution on $D$ consists of two distributions $p_\sigma$ and $p_{\sigma'}$ such that the marginals along the $d_1$ faces match. 
@@ -100,7 +98,7 @@ The goal is to construct the polytope $P_X$ of simplicial distributions defined 
 
 By the Minkowski-Weyl theorem a polytope can be defined as the intersection of a finite number of half-space inequalities or as the convex hull of a finite number of extreme points. The former is called the $H$-representation while the latter is called $V$-representation of the polytope. The problem of converting from $H$ to $V$ representation is called the vertex (facet) enumeration problem. The polytope $P_X$ can be defined in its $H$-representation as follows. For $(a,b)\in \mathbb{Z}_2^2$ and non-degenerate $2$-simplex $\sigma$ let us consider the distribution $p_\sigma$ on each triangle. Since we work with the semi-ring $\mathbb{R}_{\geq 0}$ we require that $p_\sigma^{ab}\geq 0$ for all $(a,b)\in \mathbb{Z}_2^2$ and non-degenerate $2$-simplex $\sigma$. This yields an unbounded polyhedron (a cone) given by the positive orthant of a Euclidean space. Moreover, each distribution $p_\sigma^{ab}$ is normalized $\sum_{a,b} p_\sigma^{ab} =1 $ and there are additional compatibility conditions $d_i \sigma = d_j\sigma^\prime$ leading to the constraints
 
-$$\sum_{ab\in\mathbb{Z}_2^2~:~d_i(ab)=c} p_\sigma^{ab} = \sum_{ab\in\mathbb{Z}_2^2~:~d_j(ab)=c} p_{\sigma^\prime}^{ab}.$$
+$\sum_{ab\in\mathbb{Z}_2^2~:~d_i(ab)=c} p_\sigma^{ab} = \sum_{ab\in\mathbb{Z}_2^2~:~d_j(ab)=c} p_{\sigma^\prime}^{ab}.$
 
 
 The intersection of the cone with these affine subspaces yields a polytope $P_X$.
@@ -115,16 +113,16 @@ In the framework of simplicial complexes we could not implement this collapse as
 
 We consider the behavior of degeneracies in the case of two-dimensional simplicial distributions. <!--Let $p:X\to DY$ be a simplicial distributoin where $X$ is two-dimensional.--> Suppose we have a non-degenerate $2$-simplex $\sigma\in X_2$ such that one of its faces is a degenerate $1$-simplex, i.e. $d_i(\sigma) = s_0(c)$ for some $c\in X_0$. Since $p$ is a simplicial map we also have
 
-$$d_i(p_\sigma) = s_0(p_c).$$
+$d_i(p_\sigma) = s_0(p_c).$
 
 <!--For an outcome space $N\mathbb{Z}_d$ we can associate $p(\sigma)$ with a tuple $(p^{ab})$ of length $d\times d$. There are three face maps given by
 
-$$ \left(d_i(p_\sigma)\right)(r) =%
+$ \left(d_i(p_\sigma)\right)(r) =%
 \begin{cases}
       \sum_a p_\sigma(ar) & i=0 \\
       \sum_{a+b = r ~\text{mod}~d}p_\sigma(ab) & i =1 \\
       \sum_a p_\sigma(ra) & i = 2~.
-    \end{cases}$$-->
+    \end{cases}$-->
 
 Conversely we have that there is a unique distribution on a $0$-simplex given by $p_c = 1$. The degeneracy map acting on this distribution is given by a tuple $s_0(p_c) = \delta^0 $, which is a delta-distribution such that $\delta^0(a) = 1$ for $a = 0$ and $\delta^0(a) =0$ otherwise. Thus the relation $d_i(p_\sigma) = s_0(p_c)$ yields
 
