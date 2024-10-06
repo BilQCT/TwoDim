@@ -38,7 +38,9 @@ A simplicial set $X$ consists of the following data:
 where the face and the degeneracy maps satisfy the simplicial relations. The set $X_n$ represents the set of $n$-simplices. The face and degeneracy maps encode the gluing and collapsing data. A simplex is called non-degenerate if it is not in the image of a degeneracy map.
 
 A simplicial map $f:X\to Y$ consists of functions $f_n:X_n\to Y_n$, $n\geq 0$, compatible with the simplicial structure. Writing $f_\sigma = f_n(\sigma)$ this means that
-$$ d_i f_\sigma = f_{d_i\sigma} \;\;\;\; s_j f_\sigma = f_{s_j \sigma} $$
+
+$ d_i f_\sigma = f_{d_i\sigma} \;\;\;\; s_j f_\sigma = f_{s_j \sigma} $
+
 for all face and degeneracy maps. A simplicial map is determined by $f_\sigma$'s where $\sigma$ is a non-degenerate simplex of $X$.
  
 
