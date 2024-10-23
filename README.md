@@ -24,3 +24,6 @@ GAP
 Polymake
 Combinatorics
 MacroTools
+
+**Acknowledgments:** This work is supported by the US Air Force Office of Scientific Research
+under award number FA9550-21-1-0002 and the Digital Horizon Europe project FoQaCiA, GA no.101070558.
